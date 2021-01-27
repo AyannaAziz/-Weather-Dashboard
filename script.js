@@ -1,6 +1,6 @@
 $(document).ready(function(){
   
-//   DisplaySearchHistory()
+  DisplaySearchHistory()
   
       //call default city on page load
       defaultCity();
@@ -36,8 +36,7 @@ $(document).ready(function(){
          // Display  wind 
          $('#windSet').text(data.wind.speed)
   
-          // 2nd ajax call to get the uv index
-              
+          // 2nd ajax call to get the uv index  
               var lat = data.coord.lat;
               var lon = data.coord.lon;
               $.ajax({
@@ -112,8 +111,7 @@ $(document).ready(function(){
               //card body 
               var forecastDate = forecastDateTxt.split(" ")[0];
               var forecastTime = forecastDateTxt.split(" ")[1];
-              // console.log(forecastDate);
-              // console.log(forecastTime);
+            
       
               // since the api return forecast for every 3hours, we will choose to return only a forecast for a spcecific hour =>
               if (forecastTime === "00:00:00") {
