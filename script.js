@@ -36,6 +36,23 @@ $(document).ready(function(){
    $('#windSet').text(data.wind.speed)
 
 
+// ajax call to get the uv index
+    var lat = data.coord.lat;
+    var lon = data.coord.lon;
+    $.ajax({
+      method: "GET",
+      url:
+        "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat=" +
+        lat +
+        "&lon=" +
+        lon
+    }).then(function(uvdata) {
+      console.log(uvdata);
+      $("#uvSet").text(uvdata[0].value);
+    });
+       }
 
-   }
+
+
+   
 })
