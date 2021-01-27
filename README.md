@@ -19,6 +19,12 @@ The 5-days weather forecast includes the following information for each day:
 
 The local storage is used to store the previously searched cities and display them to the user in the left side of the page under the search bar.
 
+## Built With
+* HTML
+* CSS
+* JQuery
+* Open 
+
 ## Demo
 ![](weatherdemo.png)
 
@@ -27,6 +33,9 @@ In order to get all the information needed, a good deal of manipulation of the r
 
 ## Authors
 Alma Aziz
+
+## Link
+Visit the website here: https://ayannaaziz.github.io/-Weather-Dashboard/
 
 ## References
 These videos/articles were helpful in helping me get started and complete the app.
