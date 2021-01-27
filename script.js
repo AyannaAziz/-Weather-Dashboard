@@ -6,7 +6,7 @@ $(document).ready(function(){
       defaultCity();
   
       function defaultCity(){
-          var url = "https://api.openweathermap.org/data/2.5/weather?q=Denver&APPID=0946b5eb988b3caf2e24954f8caf2636"
+          var url = "https://api.openweathermap.org/data/2.5/weather?q=Denver&appid=22face1056f8afe0875e71a72b411e82"
                  $.get(url,function(data,status){
                   console.log(data)
                   displayData(data)
@@ -43,10 +43,10 @@ $(document).ready(function(){
               $.ajax({
                 method: "GET",
                 url:
-                  "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat=" +
+                  "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=22face1056f8afe0875e71a72b411e82&lat=" +
                   lat +
                   "&lon=" +
-                  lon
+                  lon 
               }).then(function(uvdata) {
                 console.log(uvdata);
                 $("#uvSet").text(uvdata[0].value);
@@ -64,7 +64,7 @@ $(document).ready(function(){
            console.log(city)
            
       // api call: GET POST PUT DELETE
-           var ApiUrl ="https://api.openweathermap.org/data/2.5/weather?q=" + city +"&APPID=0946b5eb988b3caf2e24954f8caf2636";
+           var ApiUrl ="https://api.openweathermap.org/data/2.5/weather?q=" + city +"&APPID=22face1056f8afe0875e71a72b411e82";
          
            $.ajax({
             method: "GET",
@@ -96,7 +96,7 @@ $(document).ready(function(){
           var ApiUrl =
             "https://api.openweathermap.org/data/2.5/forecast?q=" +
             city +
-            "&APPID=0946b5eb988b3caf2e24954f8caf2636";
+            "&APPID=22face1056f8afe0875e71a72b411e82";
           $.ajax({
             method: "GET",
             url: ApiUrl
@@ -122,11 +122,11 @@ $(document).ready(function(){
                 var card;
                 if (index === forecastArray.length - 1) {
                   card = $(
-                    "<div class='card bg-primary text-white  col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
+                    "<div class='card bg-primary text-white col-lg' style=''>"
                   );
                 } else {
                   card = $(
-                    "<div class='card mr-4 mr-2 bg-primary text-white col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
+                    "<div class='card mr-20 mr-2 bg-primary text-white ' style=''>"
                   );
                 }
                 const cardBody = $("<div class='card-body my-1'>");
