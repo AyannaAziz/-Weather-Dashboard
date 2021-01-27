@@ -20,7 +20,7 @@ The 5-days weather forecast includes the following information for each day:
 The local storage is used to store the previously searched cities and display them to the user in the left side of the page under the search bar.
 
 ## Demo
-![picture](/Users/ayannaworld/Desktop/HomeworkBC/-Weather-Dashboard/Screen Shot 2021-01-27 at 2.30.51 PM.png)
+![picture](/Weatherdemo.png)
 
 ## Challenges 
 In order to get all the information needed, a good deal of manipulation of the response from the get request was needed, including taking information from one response to generate a new request. For example, the search based on city name returns latitude and longitude coordinates, and these coordinates are used in the UV Index get request.
